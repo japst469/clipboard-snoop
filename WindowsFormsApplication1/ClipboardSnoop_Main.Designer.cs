@@ -35,15 +35,15 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.clipboardImage = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.clipboardData = new System.Windows.Forms.Label();
+            this.FormatsList = new System.Windows.Forms.ListBox();
             this.htmlTab = new System.Windows.Forms.TabPage();
             this.rtfHTML = new System.Windows.Forms.RichTextBox();
             this.browseHTML = new System.Windows.Forms.WebBrowser();
             this.fmTextboxTab = new System.Windows.Forms.TabPage();
+            this.fmBrowser = new System.Windows.Forms.WebBrowser();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.fmTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.fmBrowser = new System.Windows.Forms.WebBrowser();
             this.tabPanel.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -124,7 +124,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.clipboardData);
+            this.tabPage3.Controls.Add(this.FormatsList);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -132,16 +132,17 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Data Formats";
             this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
-            // clipboardData
+            // FormatsList
             // 
-            this.clipboardData.AutoSize = true;
-            this.clipboardData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.clipboardData.Location = new System.Drawing.Point(3, 3);
-            this.clipboardData.Name = "clipboardData";
-            this.clipboardData.Size = new System.Drawing.Size(35, 13);
-            this.clipboardData.TabIndex = 0;
-            this.clipboardData.Text = "label1";
+            this.FormatsList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FormatsList.FormattingEnabled = true;
+            this.FormatsList.Location = new System.Drawing.Point(3, 3);
+            this.FormatsList.Name = "FormatsList";
+            this.FormatsList.Size = new System.Drawing.Size(904, 458);
+            this.FormatsList.TabIndex = 1;
+            this.FormatsList.SelectedIndexChanged += new System.EventHandler(this.FormatsList_SelectedIndexChanged);
             // 
             // htmlTab
             // 
@@ -190,6 +191,17 @@
             this.fmTextboxTab.Text = "FileMaker";
             this.fmTextboxTab.UseVisualStyleBackColor = true;
             // 
+            // fmBrowser
+            // 
+            this.fmBrowser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.fmBrowser.Location = new System.Drawing.Point(3, 177);
+            this.fmBrowser.MinimumSize = new System.Drawing.Size(20, 20);
+            this.fmBrowser.Name = "fmBrowser";
+            this.fmBrowser.Size = new System.Drawing.Size(904, 128);
+            this.fmBrowser.TabIndex = 2;
+            // 
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -221,17 +233,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // fmBrowser
-            // 
-            this.fmBrowser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.fmBrowser.Location = new System.Drawing.Point(3, 177);
-            this.fmBrowser.MinimumSize = new System.Drawing.Size(20, 20);
-            this.fmBrowser.Name = "fmBrowser";
-            this.fmBrowser.Size = new System.Drawing.Size(904, 128);
-            this.fmBrowser.TabIndex = 2;
-            // 
             // ClipboardSnoop_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -246,7 +247,6 @@
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.clipboardImage)).EndInit();
             this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
             this.htmlTab.ResumeLayout(false);
             this.fmTextboxTab.ResumeLayout(false);
             this.fmTextboxTab.PerformLayout();
@@ -261,8 +261,6 @@
         private System.Windows.Forms.RichTextBox clipboardText;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.PictureBox clipboardImage;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Label clipboardData;
         private System.Windows.Forms.TabPage htmlTab;
         private System.Windows.Forms.WebBrowser browseHTML;
         private System.Windows.Forms.RichTextBox rtfHTML;
@@ -272,7 +270,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.WebBrowser fmBrowser;
-
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.ListBox FormatsList;
     }
 }
 

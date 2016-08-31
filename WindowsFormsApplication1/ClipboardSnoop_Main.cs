@@ -72,7 +72,11 @@ namespace WindowsFormsApplication1
             clipboardImage.Image = Clipboard.GetImage();
 
             IDataObject iData = Clipboard.GetDataObject();
-            clipboardData.Text = string.Join("\n", iData.GetFormats());
+            FormatsList.Items.Clear();
+            foreach( String str in iData.GetFormats() )
+            {
+                FormatsList.Items.Add(str);
+            }
 
             // Try to view the HTML
             try
@@ -176,6 +180,48 @@ namespace WindowsFormsApplication1
             fmTextboxTab.Text = "Filemaker: " + formatDescription;
         }
 
+        private void tabPage3_Click(object sender, EventArgs e) {
+
+        }
+
+        private void FormatsList_SelectedIndexChanged(object sender, EventArgs e) {
+            MessageBox.Show(GetClipboardData(FormatsList.SelectedItem.ToString()));
+        }
+
+        private string GetClipboardData(string format) {
+            string result = null;
+            // Get the stream off the clipboard.
+            System.IO.MemoryStream csdata = null;
+            if (format != "")
+            {
+                
+                Object cd = Clipboard.GetData(format);
+                //return cd.GetType().ToString().IndexOf( "System.String" ).ToString();
+                if ( cd.GetType().ToString().IndexOf( "System.String" ) > -1 ){
+                    return cd.GetType().ToString();
+                } else
+                {
+                    csdata = (System.IO.MemoryStream)cd;
+                }
+                
+                if (csdata != null)
+                {
+                    // The first 4 bytes on the clipboard is the size of data on the clipboard.
+                    //  https://msdn.microsoft.com/en-us/library/system.windows.forms.clipboard.getdata
+                    long offset = 4;
+                    csdata.Position = offset;
+                    long length = csdata.Length - offset;
+
+                    // Read out the stream to the buffer.
+                    // https://msdn.microsoft.com/en-us/library/system.io.stream.read(v=vs.110).aspx
+                    byte[] buffer = new byte[length];
+                    long readLen = csdata.Read(buffer, 0, (int)length);
+                    result = Encoding.UTF8.GetString(buffer);
+                    csdata.Dispose();
+                }
+            }
+            return result;
+        }
     }
 
     internal static class NativeMethods

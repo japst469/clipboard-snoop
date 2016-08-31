@@ -16,3 +16,12 @@ D:\FILES\PROJECTS\C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug
 \\Surfacepro2\d\FILES\PROJECTS\C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ClipboardSnoop_Main.resources
 \\Surfacepro2\d\FILES\PROJECTS\C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
 \\Surfacepro2\d\FILES\PROJECTS\C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\ClipboardSnoop.csproj.GenerateResource.Cache
+C:\Users\Joshua\Documents\GitHub\clipboard-snoop\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Joshua\Documents\GitHub\clipboard-snoop\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Joshua\Documents\GitHub\clipboard-snoop\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Joshua\Documents\GitHub\clipboard-snoop\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Joshua\Documents\GitHub\clipboard-snoop\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Joshua\Documents\GitHub\clipboard-snoop\WindowsFormsApplication1\obj\Debug\ClipboardSnoop.csprojResolveAssemblyReference.cache
+C:\Users\Joshua\Documents\GitHub\clipboard-snoop\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ClipboardSnoop_Main.resources
+C:\Users\Joshua\Documents\GitHub\clipboard-snoop\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Joshua\Documents\GitHub\clipboard-snoop\WindowsFormsApplication1\obj\Debug\ClipboardSnoop.csproj.GenerateResource.Cache
